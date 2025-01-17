@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saving Our Community (SOC)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <h1>Saving Our Community</h1>
+            <p>Bringing Healing to Our Community</p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#gallery">gallery</a></li>
+            <li><a href="contact.html"class="btn">Contact Us</a></li>
+            <li><a href="index3.html" class="btn">Login/Register</a></li>
+        </ul>
+    </nav>
+    
+    </nav>
+    
+    
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>SOC is a non-governmental organization focused on bridging gaps in economic, health, agriculture, and education sectors for vulnerable groups in Livingstone, Zambia.</p>
+            <button id="about-dropdown-btn">Learn More</button>
+            <div id="about-dropdown-content" style="display: none;">
+                <p>SOC was established in 2023 and registered as an NGO in 2024. The organization focuses on empowering vulnerable groups, including women, youths, and orphaned children. Our key activities include:</p>
+                <ul>
+                    <li>Providing educational scholarships and mentorship programs.</li>
+                    <li>Promoting health awareness and sanitation through WASH initiatives.</li>
+                    <li>Engaging in environmental and wildlife conservation efforts.</li>
+                    <li>Supporting youth development and capacity-building programs.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="programs">
+            <h2>Our Programs</h2>
+            <ul class="dropdown-list">
+                <li>
+                    Education & Scholarships
+                    <ul class="dropdown-content">
+                        <li>Primary Education</li>
+                        <li>Post-secondary Scholarships</li>
+                        <li>Mentorship Programs</li>
+                    </ul>
+                </li>
+                <li>
+                    Health Awareness & WASH
+                    <ul class="dropdown-content">
+                        <li>Sanitation Programs</li>
+                        <li>Hygiene Awareness Campaigns</li>
+                        <li>Safe Drinking Water Projects</li>
+                    </ul>
+                </li>
+                <li>
+                    Environment & Wildlife Protection
+                    <ul class="dropdown-content">
+                        <li>Tree Planting Drives</li>
+                        <li>Wildlife Conservation</li>
+                        <li>Climate Change Awareness</li>
+                    </ul>
+                </li>
+                <li>
+                    Youth Development & Mentorship
+                    <ul class="dropdown-content">
+                        <li>Leadership Training</li>
+                        <li>Entrepreneurship Workshops</li>
+                        <li>Life Skills Development</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        
+
+            <section id="gallery">
+                <h2>Gallery</h2>
+             
+                <div id="image-container"></div>
+            </section>
+            
+            <script>
+                const imageUrls = [
+                    'SOC2.jpg.jpg',   
+                    'SOC8.JPG',   
+                    'SOC5.jpg',  
+                    /*'SOC7.jpg',
+                    'SOC6.jpg',*/
+                ];
+        
+                const imageContainer = document.getElementById('image-container');
+        
+                // Function to add images dynamically
+                imageUrls.forEach(url => {
+                    // Create an image element
+                    const imgElement = document.createElement('img');
+        
+                    // Set the source of the image
+                    imgElement.src = url;
+                    imgElement.alt = 'Gallery Image';
+                    
+                    // Style the image (adjust the size and spacing)
+                    imgElement.style.width = '30%';  // Adjust image size to 30%
+                    imgElement.style.marginBottom = '15px';  // Add spacing between images
+                    imgElement.style.border = '2px solid #ccc';  // Optional: add a border around images
+                    imgElement.style.boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.1)';  // Optional: shadow effect
+        
+                    // Append the image to the gallery container
+                    imageContainer.appendChild(imgElement);
+                });
+            </script>
+            
+            
+            
+            
+    </main>
+    <footer>
+        <p>&copy; 2024 Saving Our Community. All rights reserved.</p>
+    </footer>
+    <script>
+        const dropdownBtn = document.getElementById("about-dropdown-btn");
+        const dropdownContent = document.getElementById("about-dropdown-content");
+
+        dropdownBtn.addEventListener("click", () => {
+            // Toggle the display property of the dropdown content
+            if (dropdownContent.style.display === "none") {
+                dropdownContent.style.display = "block"; 
+                dropdownBtn.textContent = "Show Less"; 
+            } else {
+                dropdownContent.style.display = "none"; // Hide content
+                dropdownBtn.textContent = "Learn More"; // Reset button text
+            }
+        });
+    </script>
+</body>
+</html>
